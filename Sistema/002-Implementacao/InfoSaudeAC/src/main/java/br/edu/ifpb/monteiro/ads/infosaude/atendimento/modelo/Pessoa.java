@@ -1,4 +1,4 @@
-package br.edu.ifpb.monteiro.ads.infosaude.atendimento.model;
+package br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes.Estados;
 import java.io.Serializable;
