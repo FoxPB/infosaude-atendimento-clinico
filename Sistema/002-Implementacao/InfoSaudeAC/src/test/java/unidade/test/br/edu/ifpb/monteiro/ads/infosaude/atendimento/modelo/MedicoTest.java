@@ -1,5 +1,6 @@
-package br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo;
+package unidade.test.br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo;
 
+import br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo.Medico;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
