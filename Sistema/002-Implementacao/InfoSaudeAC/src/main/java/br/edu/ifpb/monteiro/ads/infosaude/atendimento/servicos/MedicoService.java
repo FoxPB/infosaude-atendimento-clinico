@@ -17,8 +17,9 @@ public class MedicoService implements Serializable {
     @Inject
     private MedicoDAO medicoDao;
 
+    @Transactional
     public void save(Medico medico) throws UBSException {
-        this.medicoDao.salvar(medico);
+        medicoDao.salvar(medico);
     }
 
     @Transactional
