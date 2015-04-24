@@ -150,6 +150,7 @@
                 </execution>
             </executions>
             <configuration>
+            	<append>true</append>
                 <destFile>${sonar.jacoco.reportPath}</destFile>
             </configuration>
 			</plugin>
