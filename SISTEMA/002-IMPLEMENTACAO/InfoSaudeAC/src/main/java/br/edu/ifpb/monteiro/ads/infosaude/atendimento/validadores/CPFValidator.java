@@ -1,6 +1,7 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.validadores;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
+import java.util.logging.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -18,7 +19,7 @@ public class CPFValidator implements Validator {
 
     @Inject
     FacesUtil facesUtil;
-
+    
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
 
@@ -64,7 +65,6 @@ public class CPFValidator implements Validator {
             } else {
                 segDig = new Integer(11 - (soma % 11));
             }
-            System.out.println(primDig.toString() + segDig.toString());
             return primDig.toString() + segDig.toString();
         }
         return "Erro de validação desconhecido em: CPFValidator";
