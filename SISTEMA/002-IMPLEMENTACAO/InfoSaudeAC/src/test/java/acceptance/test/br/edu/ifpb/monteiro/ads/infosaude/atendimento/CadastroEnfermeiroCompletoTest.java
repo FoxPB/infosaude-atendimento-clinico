@@ -21,5 +21,5 @@ public class CadastroEnfermeiroCompletoTest {
   public void testCadastroEnfermeiroCompleto() {
    Assert.assertTrue(true);
   }
-
+}
   
