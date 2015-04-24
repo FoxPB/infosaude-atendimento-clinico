@@ -36,10 +36,8 @@ public class CPFValidator implements Validator {
     //Créditos ao JavaFree.org pelo algoritmo de validação de CPF
     @SuppressWarnings({"UnnecessaryBoxing", "UnnecessaryUnboxing"})
     private String calcularDigitoVerificador(String num) {
-            //if condicional para verificar se o CPF tem números iguais nos nove primeiros digitos. 
+        //if condicional para verificar se o CPF tem números iguais nos nove primeiros digitos. 
         if (num.substring(0, 3).equals(num.substring(3, 6))) {
-            if (num.substring(0, 3).equals(num.substring(6, 9))) {
-            }
         } else {
             //Calculo do 1º dígito
             Integer primDig, segDig;
@@ -48,7 +46,7 @@ public class CPFValidator implements Validator {
             for (int i = 0; i < num.length(); i++) {
                 soma += Integer.parseInt(num.substring(i, i + 1)) * peso--;
             }
-            if (soma % 11 == 0 | soma % 11 == 1) {
+            if (soma % 11 == 0 || soma % 11 == 1) {
                 primDig = new Integer(0);
             } else {
                 primDig = new Integer(11 - (soma % 11));
@@ -61,7 +59,7 @@ public class CPFValidator implements Validator {
                 soma += Integer.parseInt(num.substring(i, i + 1)) * peso--;
             }
             soma += primDig.intValue() * 2;
-            if (soma % 11 == 0 | soma % 11 == 1) {
+            if (soma % 11 == 0 || soma % 11 == 1) {
                 segDig = new Integer(0);
             } else {
                 segDig = new Integer(11 - (soma % 11));

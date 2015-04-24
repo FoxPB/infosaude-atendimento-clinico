@@ -1,10 +1,12 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes;
 
+import java.io.Serializable;
+
 /**
  *
  * @author cassio
  */
-public enum Documentacao {
+public enum Documentacao implements Serializable {
 
     RG("Carteira de Identidade"),
     CARTAO_SUS("Cartão do SUS"),
@@ -14,12 +16,12 @@ public enum Documentacao {
     CRM("CRM"),
     OUTRO("Outro");
 
-     private String descricao;
+    private final String descricao;
 
     Documentacao(String descricao) {
         this.descricao = descricao;
     }
-    
+
     public String getDescricao() {
         return descricao;
     }

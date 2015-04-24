@@ -1,12 +1,14 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes;
 
+import java.io.Serializable;
+
 /**
  * Contains a list with all states of Brazil, represented by your respective UF
  * abbreviation.
  *
  * @author cassio
  */
-public enum Estados {
+public enum Estados implements Serializable {
 
     AC("Acre"),
     AL("Alagoas"),
@@ -36,12 +38,12 @@ public enum Estados {
     SE("Sergipe"),
     TO("Tocantins");
 
-     private String descricao;
+    private final String descricao;
 
     Estados(String descricao) {
         this.descricao = descricao;
     }
-    
+
     public String getDescricao() {
         return descricao;
     }

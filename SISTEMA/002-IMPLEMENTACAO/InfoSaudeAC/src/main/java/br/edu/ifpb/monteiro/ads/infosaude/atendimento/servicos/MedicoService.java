@@ -13,9 +13,10 @@ import javax.inject.Inject;
  * @author elisangela
  */
 public class MedicoService implements Serializable {
-    
+
     @Inject
     private MedicoDAO medicoDao;
+    private Medico medico;
 
     @Transactional
     public void save(Medico medico) throws UBSException {
@@ -23,8 +24,8 @@ public class MedicoService implements Serializable {
     }
 
     @Transactional
-    public void delete(Medico medico)  throws UBSException{
-        medico = findById(medico.getId());
+    public void delete(Medico medico) throws UBSException {
+        this.medico = findById(medico.getId());
         medicoDao.delete(medico);
     }
 
@@ -35,5 +36,5 @@ public class MedicoService implements Serializable {
     public List<Medico> findAll() {
         return medicoDao.findAll();
     }
-    
+
 }

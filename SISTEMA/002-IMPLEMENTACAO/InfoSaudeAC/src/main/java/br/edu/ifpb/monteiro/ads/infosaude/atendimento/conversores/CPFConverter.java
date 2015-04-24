@@ -19,7 +19,7 @@ public class CPFConverter implements Converter {
         // Convertendo CPF com máscara (111.111.111-11)
         // em CPF sem máscara (11111111111).
         String cpf = value;
-        if (value != null && !value.equals("")) {
+        if (value != null && !"".equals(value)) {
             cpf = value.replaceAll("\\.", "").replaceAll("\\-", "");
         }
         return cpf;

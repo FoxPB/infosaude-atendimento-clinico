@@ -1,5 +1,6 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.dao;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -8,8 +9,9 @@ import javax.persistence.criteria.CriteriaQuery;
 /**
  *
  * @author elisangela
+ * @param <T>
  */
-public abstract class DaoAbstrato<T> {
+public abstract class DaoAbstrato<T> implements Serializable{
     
     @Inject
     private EntityManager entityManager;
