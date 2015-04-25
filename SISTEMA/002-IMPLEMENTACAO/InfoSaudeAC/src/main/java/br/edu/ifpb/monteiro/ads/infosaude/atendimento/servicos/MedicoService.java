@@ -29,7 +29,7 @@ public class MedicoService implements Serializable {
         medicoDao.delete(medico);
     }
 
-    public Medico findById(Long id) throws UBSException {
+    public Medico findById(Long id) {
         return medicoDao.findById(id);
     }
 
