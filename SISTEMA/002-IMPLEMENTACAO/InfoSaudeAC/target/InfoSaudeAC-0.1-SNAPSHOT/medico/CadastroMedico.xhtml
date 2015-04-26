@@ -11,7 +11,7 @@
         <f:viewParam name="medico" value="#{medicoBean.medico}"/>
     </f:metadata>
 
-    <ui:define name="titulo">#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor}</ui:define>
+    <ui:define name="titulo">#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
 

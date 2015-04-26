@@ -38,5 +38,4 @@ public class DateTimeUtilBean implements Serializable {
         this.date = date;
     }
 
-
 }

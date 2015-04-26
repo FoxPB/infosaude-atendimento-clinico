@@ -9,7 +9,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
- *
+ * Classe de serviço que faz chamadas aos métodos de persistência e pode conter
+ * lógica de negócio e pode fazer chamadas a outras partes do sistema, caso
+ * necessite.
  * @author Cássio Oliveira
  */
 public class OdontologoService implements Serializable {

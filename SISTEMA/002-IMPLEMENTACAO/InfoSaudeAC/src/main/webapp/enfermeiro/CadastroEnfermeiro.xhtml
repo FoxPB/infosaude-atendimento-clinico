@@ -11,8 +11,8 @@
         <f:viewParam name="enfermeiro" value="#{enfermeiroBean.enfermeiro}"/>
     </f:metadata>
 
-    <ui:define name="titulo">#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse}</ui:define>
-    
+    <ui:define name="titulo">#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse} | #{msg.systemName}</ui:define>
+
     <ui:define name="conteudo">
         <p:panel header="#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse}">
 

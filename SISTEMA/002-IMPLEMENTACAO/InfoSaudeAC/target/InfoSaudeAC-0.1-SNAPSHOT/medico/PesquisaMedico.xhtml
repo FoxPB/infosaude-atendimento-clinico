@@ -7,8 +7,8 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
                 template="/WEB-INF/templates/cabecalho.xhtml">
 
-    <ui:define name="titulo">#{msg.searchCadastreDentist}</ui:define>
-    
+    <ui:define name="titulo">#{msg.searchCadastreDentist} | #{msg.systemName}</ui:define>
+
     <ui:define name="conteudo">
         <p:panel header="#{msg.searchCadastreDoctor}">
             <h:form id="formPesquisaMedico">
@@ -57,12 +57,12 @@
                         <p:commandButton id="viewButton" title="#{msg.view}" icon="ui-icon ui-icon-extlink" style="font-size: 10px">
                             <p:tooltip for="viewButton" value="#{msg.viewSelectedRowDetails}"/>
                         </p:commandButton>   
-                        
+
                         <p:button id="editButton" title="#{msg.edit}" icon="ui-icon ui-icon-pencil" style="font-size: 10px" outcome="/medico/CadastroMedico">
                             <f:param  name="medico" value="#{medico.id}"/>
                             <p:tooltip for="editButton" value="#{msg.editSelectedRow}"/>
                         </p:button>
-                        
+
                         <p:commandButton id="deleteButton" title="#{msg.delete}" icon="ui-icon ui-icon-trash" style="font-size: 10px"
                                          action="#{medicoBean.excluir}" process="@this" update="datatablePesquisaMedico">
                             <f:setPropertyActionListener value="#{medico}" target="#{medicoBean.medicoSelecionado}"/>

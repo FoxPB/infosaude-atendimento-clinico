@@ -6,8 +6,8 @@ import java.util.List;
 import javax.enterprise.inject.Model;
 
 /**
- *
- * @author elisangela
+ * 
+ * @author cassio
  */
 @Model
 public class PessoaBean {

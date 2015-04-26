@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
+ * Classe que representa um modelo de uma entidade a ser persistida no banco,
+ * com todos os atributos relacionados.
  *
  * @author cassio
  */

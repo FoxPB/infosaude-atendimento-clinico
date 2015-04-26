@@ -3,7 +3,7 @@ package br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes;
 import java.io.Serializable;
 
 /**
- * Contains a list with Gender, represented by a letter.
+ * Enumeração que retorna as possibilidades de gênero para as telas de cadastro.
  *
  * @author cassio
  */

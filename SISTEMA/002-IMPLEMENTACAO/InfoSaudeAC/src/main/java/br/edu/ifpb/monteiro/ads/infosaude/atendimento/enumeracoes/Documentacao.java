@@ -3,6 +3,8 @@ package br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes;
 import java.io.Serializable;
 
 /**
+ * Enumeração que retorna alguns documentos comuns solicitados nas telas de
+ * cadastro.
  *
  * @author cassio
  */

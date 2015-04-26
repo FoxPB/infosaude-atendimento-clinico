@@ -16,6 +16,11 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * Classe que representa um modelo de uma entidade a ser persistida no banco,
+ * com todos os atributos relacionados.
+ * @author cassio
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Pessoa implements Serializable {

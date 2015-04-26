@@ -4,12 +4,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 /**
+ * Classe que representa um modelo de uma entidade a ser persistida no banco,
+ * com todos os atributos relacionados.
  *
  * @author cassio
  */
 @Entity
-public class Odontologo extends Pessoa{
-    
+public class Odontologo extends Pessoa {
+
     @Column(name = "odontologo_cro", length = 30)
     private String cro;
 

@@ -1,7 +1,6 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.validadores;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
-import java.util.logging.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -11,15 +10,25 @@ import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
 
 /**
+ * Classe que representa um validador e tem como responsabilidade validar um CPF
+ * inserido em telas da camada de apresentação.
  *
- * @author cassio
+ * Créditos ao JavaFree.org pelo algoritmo de validação de CPF
  */
 @FacesValidator(value = "cpfValidator")
 public class CPFValidator implements Validator {
 
     @Inject
     FacesUtil facesUtil;
-    
+
+    /**
+     * Método padrão do validador sobrescrito da interface Validator
+     *
+     * @param context
+     * @param component
+     * @param value
+     * @throws ValidatorException
+     */
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
 
@@ -34,7 +43,6 @@ public class CPFValidator implements Validator {
         }
     }
 
-    //Créditos ao JavaFree.org pelo algoritmo de validação de CPF
     @SuppressWarnings({"UnnecessaryBoxing", "UnnecessaryUnboxing"})
     private String calcularDigitoVerificador(String num) {
         //if condicional para verificar se o CPF tem números iguais nos nove primeiros digitos. 

@@ -9,8 +9,11 @@ import java.util.List;
 import javax.inject.Inject;
 
 /**
+ * Classe de serviço que faz chamadas aos métodos de persistência e pode conter
+ * lógica de negócio e pode fazer chamadas a outras partes do sistema, caso
+ * necessite.
  *
- * @author elisangela
+ * @author Cássio Oliveira
  */
 public class EnfermeiroService implements Serializable {
 
@@ -33,7 +36,7 @@ public class EnfermeiroService implements Serializable {
         return enfermeiroDAO.findAll();
     }
 
-    public Enfermeiro findById(Long id){
+    public Enfermeiro findById(Long id) {
         return enfermeiroDAO.findById(id);
     }
 

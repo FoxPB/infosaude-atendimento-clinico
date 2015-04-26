@@ -3,8 +3,8 @@ package br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes;
 import java.io.Serializable;
 
 /**
- * Contains a list with all states of Brazil, represented by your respective UF
- * abbreviation.
+ * Enumeração que retorna os estados brasileiros e suas siglas para as telas de
+ * cadastro.
  *
  * @author cassio
  */
