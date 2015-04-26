@@ -1,3 +1,5 @@
+br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/EnfermeiroConverter.class
+br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/MedicoConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/dao/OdontologoDao.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Pessoa_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/Transactional.class
@@ -24,6 +26,8 @@ br/edu/ifpb/monteiro/ads/infosaude/atendimento/servicos/EnfermeiroService.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/TransactionInterceptor.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jsf/FacesUtil.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Odontologo_.class
+br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/cdi/CDIServiceLocator.class
+br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/OdontologoConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Medico_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Estados.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Sexo.class

@@ -20,6 +20,4 @@ public class Odontologo extends Pessoa{
     public void setCro(String cro) {
         this.cro = cro;
     }
-
-    
 }

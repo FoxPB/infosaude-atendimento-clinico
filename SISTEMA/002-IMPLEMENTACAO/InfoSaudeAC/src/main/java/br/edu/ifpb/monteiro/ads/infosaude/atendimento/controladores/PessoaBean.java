@@ -12,7 +12,7 @@ import javax.enterprise.inject.Model;
 @Model
 public class PessoaBean {
 
-    private List<Estados> estados;
+    private final List<Estados> estados;
 
     public PessoaBean() {
         estados = Arrays.asList(Estados.values());

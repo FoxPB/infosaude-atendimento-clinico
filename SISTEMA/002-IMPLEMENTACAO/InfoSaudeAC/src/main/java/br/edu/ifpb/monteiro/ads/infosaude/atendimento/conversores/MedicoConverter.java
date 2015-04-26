@@ -2,21 +2,20 @@ package br.edu.ifpb.monteiro.ads.infosaude.atendimento.conversores;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo.Medico;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.servicos.MedicoService;
+import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.cdi.CDIServiceLocator;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
-import javax.inject.Inject;
 
-/**
- *
- * @author elisangela
- */
 @FacesConverter(forClass = Medico.class)
 public class MedicoConverter implements Converter {
 
-    @Inject
-    private MedicoService medicoService;
+    private final MedicoService medicoService;
+
+    public MedicoConverter() {
+        this.medicoService = CDIServiceLocator.getBean(MedicoService.class);
+    }
 
     @Override
     public Object getAsObject(FacesContext context, UIComponent component, String value) {

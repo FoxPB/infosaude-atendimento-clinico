@@ -44,6 +44,14 @@ public class OdontologoBean {
         this.odontologoService.delete(odontologoSelecionado);
         facesUtil.mensagemSucesso("Exclusão efetuada com sucesso!");
     }
+    
+    /*
+     * Metodo que verifica se o objeto esta nulo quando for recuperado.
+     * Se sim, refere-se a um novo cadastro, senao refere-se a um produto a ser editado
+     */
+    public boolean getEditando() {
+        return this.odontologo.getId() != null;
+    }
 
     public Odontologo getOdontologoSelecionado() {
         return odontologoSelecionado;

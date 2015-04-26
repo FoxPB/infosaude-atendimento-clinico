@@ -33,7 +33,7 @@ public class OdontologoService implements Serializable {
         return odontologoDAO.findAll();
     }
 
-    public Odontologo findById(Long id) throws UBSException {
+    public Odontologo findById(Long id){
         return odontologoDAO.findById(id);
     }
 

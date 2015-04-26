@@ -33,7 +33,7 @@ public class EnfermeiroService implements Serializable {
         return enfermeiroDAO.findAll();
     }
 
-    public Enfermeiro findById(Long id) throws UBSException {
+    public Enfermeiro findById(Long id){
         return enfermeiroDAO.findById(id);
     }
 
