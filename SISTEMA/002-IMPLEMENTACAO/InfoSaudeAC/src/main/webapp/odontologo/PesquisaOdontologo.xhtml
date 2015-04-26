@@ -68,6 +68,9 @@
                                          action="#{odontologoBean.excluir}" process="@this" update="datatablePesquisaOdontologo">
                             <f:setPropertyActionListener value="#{odontologo}" target="#{odontologoBean.odontologoSelecionado}"/>
                             <p:tooltip for="deleteButton" value="#{msg.deleteSelectedRow}"/>
+
+                            <p:confirm icon="ui-icon-alert" header="#{msg.exclusionCadastreDentist}" message="#{msg.realyExcludeDentist}"/>
+
                         </p:commandButton>
                     </p:column>
 

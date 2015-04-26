@@ -1,7 +1,6 @@
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/EnfermeiroConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/MedicoConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/dao/OdontologoDao.class
-br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Pessoa_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/Transactional.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/excecoes/UBSException.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/dao/EnfermeiroDao.class
@@ -9,7 +8,6 @@ br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Documentacao.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/controladores/MedicoBean.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/CPFConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Enfermeiro.class
-br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Enfermeiro_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/controladores/PessoaBean.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Pessoa.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/servicos/OdontologoService.class
@@ -25,10 +23,8 @@ br/edu/ifpb/monteiro/ads/infosaude/atendimento/servicos/MedicoService.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/servicos/EnfermeiroService.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/TransactionInterceptor.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jsf/FacesUtil.class
-br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Odontologo_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/cdi/CDIServiceLocator.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/OdontologoConverter.class
-br/edu/ifpb/monteiro/ads/infosaude/atendimento/modelo/Medico_.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Estados.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Sexo.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/validadores/CPFValidator.class

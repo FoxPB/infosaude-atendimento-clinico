@@ -19,7 +19,6 @@ public class EnfermeiroService implements Serializable {
 
     @Inject
     private EnfermeiroDao enfermeiroDAO;
-    private Enfermeiro enfermeiro;
 
     @Transactional
     public void save(Enfermeiro enfermeiro) throws UBSException {
@@ -28,7 +27,7 @@ public class EnfermeiroService implements Serializable {
 
     @Transactional
     public void delete(Enfermeiro enfermeiro) throws UBSException {
-        this.enfermeiro = findById(enfermeiro.getId());
+        enfermeiro = findById(enfermeiro.getId());
         enfermeiroDAO.delete(enfermeiro);
     }
 

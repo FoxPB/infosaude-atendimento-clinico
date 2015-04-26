@@ -12,13 +12,13 @@ import javax.inject.Inject;
  * Classe de serviço que faz chamadas aos métodos de persistência e pode conter
  * lógica de negócio e pode fazer chamadas a outras partes do sistema, caso
  * necessite.
+ *
  * @author Cássio Oliveira
  */
 public class OdontologoService implements Serializable {
 
     @Inject
     private OdontologoDao odontologoDAO;
-    private Odontologo odontologo;
 
     @Transactional
     public void save(Odontologo odontologo) throws UBSException {
@@ -27,7 +27,7 @@ public class OdontologoService implements Serializable {
 
     @Transactional
     public void delete(Odontologo odontologo) throws UBSException {
-        this.odontologo = findById(odontologo.getId());
+        odontologo = findById(odontologo.getId());
         odontologoDAO.delete(odontologo);
     }
 
@@ -35,7 +35,7 @@ public class OdontologoService implements Serializable {
         return odontologoDAO.findAll();
     }
 
-    public Odontologo findById(Long id){
+    public Odontologo findById(Long id) {
         return odontologoDAO.findById(id);
     }
 

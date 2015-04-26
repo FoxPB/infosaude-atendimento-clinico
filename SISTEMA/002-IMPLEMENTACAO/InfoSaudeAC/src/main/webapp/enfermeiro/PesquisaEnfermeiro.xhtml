@@ -67,6 +67,9 @@
                                          action="#{enfermeiroBean.excluir}" process="@this" update="datatablePesquisaEnfermeiro">
                             <f:setPropertyActionListener value="#{enfermeiro}" target="#{enfermeiroBean.enfermeiroSelecionado}"/>
                             <p:tooltip for="deleteButton" value="#{msg.deleteSelectedRow}"/>
+                            
+                            <p:confirm icon="ui-icon-alert" header="#{msg.exclusionCadastreNurse}" message="#{msg.realyExcludeNurse}"/>
+                            
                         </p:commandButton>
                     </p:column>
 

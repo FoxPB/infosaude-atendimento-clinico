@@ -43,7 +43,7 @@ public class MedicoBean {
     public void excluir() throws UBSException {
         this.medicoService.delete(medicoSelecionado);
         facesUtil.mensagemSucesso("Exclusão efetuada com sucesso!");
-    }
+    } 
 
     /*
      * Metodo que verifica se o objeto esta nulo quando for recuperado.
