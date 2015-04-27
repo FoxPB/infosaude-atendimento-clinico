@@ -10,11 +10,11 @@
     <ui:define name="titulo">#{msg.searchCadastreNurse} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
-        <p:growl id="notificacoes"/>
         <p:panel header="#{msg.searchCadastreNurse}">
             <h:form id="formPesquisaEnfermeiro">
 
-                
+                <p:growl/>
+
                 <p:toolbar >
                     <f:facet name="right">
                         <p:button value="#{msg.newRegister}" id="botaoTelaCadastro"  icon="ui-icon ui-icon-pencil" outcome="/enfermeiro/CadastroEnfermeiro"/>
@@ -69,9 +69,9 @@
                                          action="#{enfermeiroBean.excluir}" process="@this" update="datatablePesquisaEnfermeiro">
                             <f:setPropertyActionListener value="#{enfermeiro}" target="#{enfermeiroBean.enfermeiroSelecionado}"/>
                             <p:tooltip for="deleteButton" value="#{msg.deleteSelectedRow}"/>
-                            
+
                             <p:confirm icon="ui-icon-alert" header="#{msg.exclusionCadastreNurse}" message="#{msg.realyExcludeNurse}"/>
-                            
+
                         </p:commandButton>
                     </p:column>
 
