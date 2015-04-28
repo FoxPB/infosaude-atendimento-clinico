@@ -2,6 +2,8 @@ package br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jpa;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.excecoes.UBSException;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.Interceptor;
@@ -32,7 +34,7 @@ public class TransactionInterceptor implements Serializable {
     /* The annotation @AroundInvoke sign this method for to be called automatically before the 
      method annotated with @Transactional */
     @AroundInvoke
-    public Object invoke(InvocationContext context) throws Exception {
+    public Object invoke(InvocationContext context) throws UBSException {
         EntityTransaction entityTransaction = entityManager.getTransaction();
         boolean owner = false;
 
@@ -53,13 +55,18 @@ public class TransactionInterceptor implements Serializable {
                 //Any anomaly operation and the changes are undone
                 entityTransaction.rollback();
             }
-            throw e;
+            try {
+                throw e;
+            } catch (Exception ex) {
+                Logger.getLogger(TransactionInterceptor.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } finally {
             if (entityTransaction != null && entityTransaction.isActive() && owner) {
                 //Finaly, without any errors, the changes are sended to the database.
                 entityTransaction.commit();
             }
         }
+        return null;
     }
 
 }
