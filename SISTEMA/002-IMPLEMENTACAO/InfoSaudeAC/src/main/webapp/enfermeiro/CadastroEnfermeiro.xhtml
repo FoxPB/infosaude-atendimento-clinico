@@ -14,7 +14,7 @@
     <ui:define name="titulo">#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
-        <p:panel header="#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse}">
+        <p:fieldset legend="#{enfermeiroBean.editando ? msg.editCadastreNurse : msg.newRegisterNurse}">
 
             <h:form id="formCadastroEnfermeiro">
 
@@ -139,6 +139,6 @@
                 </p:toolbar>
 
             </h:form>
-        </p:panel>
+        </p:fieldset>
     </ui:define>
 </ui:composition>

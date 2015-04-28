@@ -10,7 +10,7 @@
     <ui:define name="titulo">#{msg.searchCadastreDoctor} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
-        <p:panel header="#{msg.searchCadastreDoctor}">
+        <p:fieldset legend="#{msg.searchCadastreDoctor}">
             <h:form id="formPesquisaMedico">
 
                 <p:growl/>
@@ -79,7 +79,7 @@
 
                 </p:dataTable>
             </h:form>
-        </p:panel>
+        </p:fieldset>
         
         
 <!--        <p:dialog id="MedicoViewDialog" visible="true" modal="true" transient="true">

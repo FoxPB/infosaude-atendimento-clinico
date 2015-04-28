@@ -10,7 +10,7 @@
     <ui:define name="titulo">#{msg.searchCadastreNurse} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
-        <p:panel header="#{msg.searchCadastreNurse}">
+        <p:fieldset legend="#{msg.searchCadastreNurse}">
             <h:form id="formPesquisaEnfermeiro">
 
                 <p:growl/>
@@ -78,7 +78,7 @@
                 </p:dataTable>
 
             </h:form>
-        </p:panel>
+        </p:fieldset>
     </ui:define>
 </ui:composition>
 

@@ -15,7 +15,7 @@
 
     <ui:define name="conteudo">
 
-        <p:panel header="#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor}">
+        <p:fieldset legend="#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor}">
 
             <h:form id="formCadastroMedico">
 
@@ -141,7 +141,7 @@
 
             </h:form>
 
-        </p:panel>
+        </p:fieldset>
     </ui:define>
 
 </ui:composition>
