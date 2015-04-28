@@ -1,8 +1,8 @@
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/EnfermeiroConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/conversores/MedicoConverter.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/dao/OdontologoDao.class
-br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/Transactional.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/excecoes/UBSException.class
+br/edu/ifpb/monteiro/ads/infosaude/atendimento/util/jpa/Transactional.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/dao/EnfermeiroDao.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/enumeracoes/Documentacao.class
 br/edu/ifpb/monteiro/ads/infosaude/atendimento/controladores/MedicoBean.class

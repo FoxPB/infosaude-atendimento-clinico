@@ -7,7 +7,7 @@
                 xmlns:f="http://xmlns.jcp.org/jsf/core"
                 template="/WEB-INF/templates/cabecalho.xhtml">
 
-    <ui:define name="titulo">#{msg.searchCadastreDentist} | #{msg.systemName}</ui:define>
+    <ui:define name="titulo">#{msg.searchCadastreDoctor} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
         <p:panel header="#{msg.searchCadastreDoctor}">
@@ -57,7 +57,8 @@
 
                     <p:column headerText="#{msg.actions}" style="text-align: center" width="25">
                         <p:button id="viewButton" title="#{msg.view}" icon="ui-icon ui-icon-extlink" style="font-size: 10px"
-                                         outcome="/medico/VisualizaMedico" >
+                                  outcome="/medico/VisualizaMedico">
+                            <f:param  name="medico" value="#{medico.id}"/>
                             <p:tooltip for="viewButton" value="#{msg.viewSelectedRowDetails}"/>
                         </p:button>   
 
@@ -79,6 +80,11 @@
                 </p:dataTable>
             </h:form>
         </p:panel>
+        
+        
+<!--        <p:dialog id="MedicoViewDialog" visible="true" modal="true" transient="true">
+            <ui:include src="VisualizaMedico.xhtml"/>
+        </p:dialog>-->
     </ui:define>
 </ui:composition>
 
