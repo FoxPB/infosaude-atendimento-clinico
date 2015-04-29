@@ -8,29 +8,29 @@
                 template="/WEB-INF/templates/cabecalho.xhtml">
 
     <f:metadata>
-        <f:viewParam name="enfermeiro" value="#{enfermeiroBean.enfermeiro}"/>
+        <f:viewParam name="odontologo" value="#{odontologoBean.odontologo}"/>
     </f:metadata>
 
-    <ui:define name="titulo">#{msg.viewCadastreNurse} | #{msg.systemName}</ui:define>
+    <ui:define name="titulo">#{msg.viewCadastreDentist} | #{msg.systemName}</ui:define>
 
     <ui:define name="conteudo">
 
-        <p:panel header="#{msg.viewCadastreNurse}">
+        <p:panel header="#{msg.viewCadastreDentist}">
 
-            <h:form id="formCadastroEnfermeiro">
+            <h:form id="formCadastroOdontologo">
 
                 <p:fieldset legend="#{msg.personal}">
                     <h:panelGrid columns="2">
                         <p:outputLabel for="nome" value="#{msg.name}"/>
-                        <p:outputLabel id="nome" value="#{enfermeiroBean.enfermeiro.nome}" styleClass="upper" />
+                        <p:outputLabel id="nome" value="#{odontologoBean.odontologo.nome}" styleClass="upper" />
 
                         <p:outputLabel for="dataNascimento" value="#{msg.birthDate}"/>
-                        <p:outputLabel id="dataNascimento" value="#{enfermeiroBean.enfermeiro.dataNascimento}">
+                        <p:outputLabel id="dataNascimento" value="#{odontologoBean.odontologo.dataNascimento}">
                             <f:convertDateTime type="date" locale="pt_BR"/>
                         </p:outputLabel> 
 
                         <p:outputLabel for="racaCor" value="#{msg.race}/#{msg.color}"/>
-                        <p:outputLabel id="racaCor" value="#{enfermeiroBean.enfermeiro.corOuRaca}"
+                        <p:outputLabel id="racaCor" value="#{odontologoBean.odontologo.corOuRaca}"
                                        styleClass="upper"/>
                     </h:panelGrid>
                 </p:fieldset>
@@ -38,35 +38,35 @@
                 <p:fieldset legend="#{msg.contact}" style="margin-top: 15px">
                     <h:panelGrid columns="2">
                         <p:outputLabel for="telefone1" value="#{msg.phone1}"/>
-                        <p:outputLabel id="telefone1" styleClass="phone upper" value="#{enfermeiroBean.enfermeiro.telefone1}"/>
+                        <p:outputLabel id="telefone1" styleClass="phone upper" value="#{odontologoBean.odontologo.telefone1}"/>
 
                         <p:outputLabel for="telefone2" value="#{msg.phone2}"/>
-                        <p:outputLabel id="telefone2" styleClass="phone upper" value="#{enfermeiroBean.enfermeiro.telefone2}"/>
+                        <p:outputLabel id="telefone2" styleClass="phone upper" value="#{odontologoBean.odontologo.telefone2}"/>
 
                         <p:outputLabel for="email" value="#{msg.email}"/>
-                        <p:outputLabel id="email" styleClass="lower" value="#{enfermeiroBean.enfermeiro.email}"/>
+                        <p:outputLabel id="email" styleClass="lower" value="#{odontologoBean.odontologo.email}"/>
                     </h:panelGrid>
                 </p:fieldset>
 
                 <p:fieldset legend="#{msg.address}" style="margin-top: 15px" >
                     <h:panelGrid columns="4">
                         <p:outputLabel for="rua" value="#{msg.street}"/>
-                        <p:outputLabel id="rua" value="#{enfermeiroBean.enfermeiro.enderecoRua}" styleClass="upper" />
+                        <p:outputLabel id="rua" value="#{odontologoBean.odontologo.enderecoRua}" styleClass="upper" />
 
                         <p:outputLabel for="numero" value="#{msg.number}" style="margin-left: 3px"/>
-                        <p:outputLabel id="numero" value="#{enfermeiroBean.enfermeiro.enderecoNumero}" styleClass="upper" />
+                        <p:outputLabel id="numero" value="#{odontologoBean.odontologo.enderecoNumero}" styleClass="upper" />
 
                         <p:outputLabel for="bairro" value="#{msg.neighborhood}"/>
-                        <p:outputLabel id="bairro" value="#{enfermeiroBean.enfermeiro.enderecoBairro}" styleClass="upper"/>
+                        <p:outputLabel id="bairro" value="#{odontologoBean.odontologo.enderecoBairro}" styleClass="upper"/>
 
                         <p:outputLabel for="cep" value="#{msg.postalCode}" style="margin-left: 3px"/>
-                        <p:outputLabel id="cep" value="#{enfermeiroBean.enfermeiro.enderecoCep}" styleClass="upper" />
+                        <p:outputLabel id="cep" value="#{odontologoBean.odontologo.enderecoCep}" styleClass="upper" />
 
                         <p:outputLabel for="cidade" value="#{msg.city}"/>
-                        <p:outputLabel id="cidade" value="#{enfermeiroBean.enfermeiro.enderecoCidade}" styleClass="upper" />
+                        <p:outputLabel id="cidade" value="#{odontologoBean.odontologo.enderecoCidade}" styleClass="upper" />
 
                         <p:outputLabel for="estado" value="#{msg.state}" style="margin-left: 3px"/>
-                        <p:outputLabel id="estado" value="#{enfermeiroBean.enfermeiro.enderecoEstado}"/>
+                        <p:outputLabel id="estado" value="#{odontologoBean.odontologo.enderecoEstado}"/>
 
                     </h:panelGrid>
                 </p:fieldset>
@@ -74,24 +74,24 @@
                 <p:fieldset legend="#{msg.documentation}" style="margin-top: 15px">
                     <h:panelGrid columns="2">
                         <p:outputLabel for="cpf" value="#{msg.cpf}"/>
-                        <p:outputLabel id="cpf" value="#{enfermeiroBean.enfermeiro.cpf}" styleClass="upper"/>
+                        <p:outputLabel id="cpf" value="#{odontologoBean.odontologo.cpf}" styleClass="upper"/>
 
                         <p:outputLabel for="rg" value="#{msg.rg}"/>
-                        <p:outputLabel id="rg" value="#{enfermeiroBean.enfermeiro.rg}" styleClass="upper"/>
+                        <p:outputLabel id="rg" value="#{odontologoBean.odontologo.rg}" styleClass="upper"/>
 
-                        <p:outputLabel for="coren" value="#{msg.coren}"/>
-                        <p:outputLabel id="coren" value="#{enfermeiroBean.enfermeiro.coren}" styleClass="upper"/>
+                        <p:outputLabel for="coren" value="#{msg.cro}"/>
+                        <p:outputLabel id="coren" value="#{odontologoBean.odontologo.cro}" styleClass="upper"/>
 
                         <p:outputLabel for="cartaoSus" value="#{msg.susCard}"/>
-                        <p:outputLabel id="cartaoSus" value="#{enfermeiroBean.enfermeiro.cartaoSus}" styleClass="upper"/>
+                        <p:outputLabel id="cartaoSus" value="#{odontologoBean.odontologo.cartaoSus}" styleClass="upper"/>
                     </h:panelGrid>
                 </p:fieldset>
 
-                <p:toolbar id="toolbarEnfermeiro" style="margin-top: 10px;">
+                <p:toolbar id="toolbarOdontologo" style="margin-top: 10px;">
 
                     <f:facet name="right">
-                        <p:button style="font-size: 13px;" value="#{msg.searchNurse}"
-                                  id="botaoPesquisa" outcome="/enfermeiro/PesquisaEnfermeiro"
+                        <p:button style="font-size: 13px;" value="#{msg.searchDentist}"
+                                  id="botaoPesquisa" outcome="/odontologo/PesquisaOdontologo"
                                   icon="ui-icon ui-icon-search">
                         </p:button>
                     </f:facet>
