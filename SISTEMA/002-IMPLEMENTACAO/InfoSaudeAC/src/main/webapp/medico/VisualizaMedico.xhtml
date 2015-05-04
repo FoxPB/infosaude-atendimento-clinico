@@ -21,15 +21,15 @@
 
                 <p:fieldset legend="#{msg.personal}">
                     <h:panelGrid columns="2">
-                        <p:outputLabel for="nome" value="#{msg.name}"/>
+                        <p:outputLabel for="nome" value="#{msg.name}:" style="font-weight: bold"/>
                         <p:outputLabel id="nome" value="#{medicoBean.medico.nome}" styleClass="upper" />
 
-                        <p:outputLabel for="dataNascimento" value="#{msg.birthDate}"/>
+                        <p:outputLabel for="dataNascimento" value="#{msg.birthDate}:" style="font-weight: bold"/>
                         <p:outputLabel id="dataNascimento" value="#{medicoBean.medico.dataNascimento}">
                             <f:convertDateTime type="date" locale="pt_BR"/>
                         </p:outputLabel> 
 
-                        <p:outputLabel for="racaCor" value="#{msg.race}/#{msg.color}"/>
+                        <p:outputLabel for="racaCor" value="#{msg.race}/#{msg.color}:" style="font-weight: bold"/>
                         <p:outputLabel id="racaCor" value="#{medicoBean.medico.corOuRaca}"
                                        styleClass="upper"/>
                     </h:panelGrid>
@@ -37,35 +37,35 @@
 
                 <p:fieldset legend="#{msg.contact}" style="margin-top: 15px">
                     <h:panelGrid columns="2">
-                        <p:outputLabel for="telefone1" value="#{msg.phone1}"/>
+                        <p:outputLabel for="telefone1" value="#{msg.phone1}:" style="font-weight: bold"/>
                         <p:outputLabel id="telefone1" styleClass="phone upper" value="#{medicoBean.medico.telefone1}"/>
 
-                        <p:outputLabel for="telefone2" value="#{msg.phone2}"/>
+                        <p:outputLabel for="telefone2" value="#{msg.phone2}:" style="font-weight: bold"/>
                         <p:outputLabel id="telefone2" styleClass="phone upper" value="#{medicoBean.medico.telefone2}"/>
 
-                        <p:outputLabel for="email" value="#{msg.email}"/>
+                        <p:outputLabel for="email" value="#{msg.email}:" style="font-weight: bold"/>
                         <p:outputLabel id="email" styleClass="lower" value="#{medicoBean.medico.email}"/>
                     </h:panelGrid>
                 </p:fieldset>
 
                 <p:fieldset legend="#{msg.address}" style="margin-top: 15px" >
                     <h:panelGrid columns="4">
-                        <p:outputLabel for="rua" value="#{msg.street}"/>
+                        <p:outputLabel for="rua" value="#{msg.street}:" style="font-weight: bold"/>
                         <p:outputLabel id="rua" value="#{medicoBean.medico.enderecoRua}" styleClass="upper" />
 
-                        <p:outputLabel for="numero" value="#{msg.number}" style="margin-left: 3px"/>
+                        <p:outputLabel for="numero" value="#{msg.number}:" style="margin-left: 45px; font-weight: bold"/>
                         <p:outputLabel id="numero" value="#{medicoBean.medico.enderecoNumero}" styleClass="upper" />
 
-                        <p:outputLabel for="bairro" value="#{msg.neighborhood}"/>
+                        <p:outputLabel for="bairro" value="#{msg.neighborhood}:" style="font-weight: bold"/>
                         <p:outputLabel id="bairro" value="#{medicoBean.medico.enderecoBairro}" styleClass="upper"/>
 
-                        <p:outputLabel for="cep" value="#{msg.postalCode}" style="margin-left: 3px"/>
+                        <p:outputLabel for="cep" value="#{msg.postalCode}:" style="margin-left: 45px; font-weight: bold"/>
                         <p:outputLabel id="cep" value="#{medicoBean.medico.enderecoCep}" styleClass="upper" />
 
-                        <p:outputLabel for="cidade" value="#{msg.city}"/>
+                        <p:outputLabel for="cidade" value="#{msg.city}:" style="font-weight: bold"/>
                         <p:outputLabel id="cidade" value="#{medicoBean.medico.enderecoCidade}" styleClass="upper" />
 
-                        <p:outputLabel for="estado" value="#{msg.state}" style="margin-left: 3px"/>
+                        <p:outputLabel for="estado" value="#{msg.state}:" style="margin-left: 45px; font-weight: bold"/>
                         <p:outputLabel id="estado" value="#{enfermeiroBean.enfermeiro.enderecoEstado}"/>
 
                     </h:panelGrid>
@@ -73,16 +73,16 @@
 
                 <p:fieldset legend="#{msg.documentation}" style="margin-top: 15px">
                     <h:panelGrid columns="2">
-                        <p:outputLabel for="cpf" value="#{msg.cpf}"/>
+                        <p:outputLabel for="cpf" value="#{msg.cpf}:" style="font-weight: bold"/>
                         <p:outputLabel id="cpf" value="#{medicoBean.medico.cpf}" styleClass="upper"/>
 
-                        <p:outputLabel for="rg" value="#{msg.rg}"/>
+                        <p:outputLabel for="rg" value="#{msg.rg}:" style="font-weight: bold"/>
                         <p:outputLabel id="rg" value="#{medicoBean.medico.rg}" styleClass="upper"/>
 
-                        <p:outputLabel for="coren" value="#{msg.crm}"/>
+                        <p:outputLabel for="coren" value="#{msg.crm}:" style="font-weight: bold"/>
                         <p:outputLabel id="coren" value="#{medicoBean.medico.crm}" styleClass="upper"/>
 
-                        <p:outputLabel for="cartaoSus" value="#{msg.susCard}"/>
+                        <p:outputLabel for="cartaoSus" value="#{msg.susCard}:" style="font-weight: bold"/>
                         <p:outputLabel id="cartaoSus" value="#{medicoBean.medico.cartaoSus}" styleClass="upper"/>
                     </h:panelGrid>
                 </p:fieldset>
