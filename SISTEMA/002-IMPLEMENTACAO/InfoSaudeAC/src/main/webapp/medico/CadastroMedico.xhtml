@@ -15,7 +15,7 @@
 
     <ui:define name="conteudo">
 
-        <p:panel header="#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor}">
+        <p:fieldset legend="#{medicoBean.editando ? msg.editCadastreDoctor : msg.newRegisterDoctor}">
 
             <h:form id="formCadastroMedico">
 
@@ -102,7 +102,7 @@
                             <p:inputText id="cidade" value="#{medicoBean.medico.enderecoCidade}" styleClass="upper" size="40"/>
 
                             <p:outputLabel for="estado" value="#{msg.state}" style="margin-left: 3px"/>
-                            <p:selectOneMenu id="estado" value="#{enfermeiroBean.enfermeiro.enderecoEstado}">
+                            <p:selectOneMenu id="estado" value="#{medicoBean.medico.enderecoEstado}">
                                 <f:selectItem itemLabel="#{msg.selectIt}..." noSelectionOption="true"/>
                                 <f:selectItems value="#{pessoaBean.estados}" itemValue="#{estado}" itemLabel="#{estado.descricao}" var="estado"/>
                             </p:selectOneMenu>
@@ -141,7 +141,7 @@
 
             </h:form>
 
-        </p:panel>
+        </p:fieldset>
     </ui:define>
 
 </ui:composition>
