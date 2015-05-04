@@ -4,6 +4,7 @@ import br.edu.ifpb.monteiro.ads.infosaude.atendimento.excecoes.UBSException;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo.Enfermeiro;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.servicos.EnfermeiroService;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
+import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
@@ -13,7 +14,9 @@ import javax.inject.Inject;
  * @author elisangela
  */
 @Model
-public class EnfermeiroBean {
+public class EnfermeiroBean implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Inject
     FacesUtil facesUtil;

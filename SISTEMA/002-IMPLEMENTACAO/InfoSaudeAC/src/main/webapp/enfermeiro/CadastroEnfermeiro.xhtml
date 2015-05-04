@@ -96,7 +96,7 @@
                             <p:inputText id="bairro" value="#{enfermeiroBean.enfermeiro.enderecoBairro}" styleClass="upper" size="40"/>
 
                             <p:outputLabel for="cep" value="#{msg.postalCode}"/>
-                            <p:inputText id="cep" value="#{enfermeiroBean.enfermeiro.enderecoCep}" styleClass="upper" size="10"/>
+                            <p:inputMask mask="99999-999" id="cep" value="#{enfermeiroBean.enfermeiro.enderecoCep}" styleClass="upper" size="10"/>
 
                             <p:outputLabel for="cidade" value="#{msg.city}"/>
                             <p:inputText id="cidade" value="#{enfermeiroBean.enfermeiro.enderecoCidade}" styleClass="upper" size="40"/>

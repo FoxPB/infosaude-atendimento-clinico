@@ -17,6 +17,8 @@ import javax.inject.Inject;
  */
 public class MedicoService implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Inject
     private MedicoDAO medicoDao;
     

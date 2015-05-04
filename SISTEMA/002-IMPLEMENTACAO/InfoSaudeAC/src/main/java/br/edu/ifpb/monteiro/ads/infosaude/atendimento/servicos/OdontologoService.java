@@ -17,6 +17,8 @@ import javax.inject.Inject;
  */
 public class OdontologoService implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
     @Inject
     private OdontologoDao odontologoDAO;
 

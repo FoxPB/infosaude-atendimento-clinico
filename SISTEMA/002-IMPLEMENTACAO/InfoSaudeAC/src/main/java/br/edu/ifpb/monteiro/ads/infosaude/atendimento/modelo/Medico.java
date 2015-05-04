@@ -1,5 +1,6 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.modelo;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
@@ -10,7 +11,9 @@ import javax.persistence.Entity;
  * @author cassio
  */
 @Entity
-public class Medico extends Pessoa {
+public class Medico extends Pessoa implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     @Column(name = "medico_crm", length = 30)
     private String crm;
