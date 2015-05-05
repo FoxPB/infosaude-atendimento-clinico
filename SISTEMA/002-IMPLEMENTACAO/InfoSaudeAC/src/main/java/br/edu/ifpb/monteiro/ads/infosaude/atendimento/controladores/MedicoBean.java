@@ -6,8 +6,11 @@ import br.edu.ifpb.monteiro.ads.infosaude.atendimento.servicos.MedicoService;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
+import javax.persistence.RollbackException;
 
 /**
  *
@@ -37,16 +40,22 @@ public class MedicoBean implements Serializable {
         return medicos;
     }
 
-    public void salvar() throws UBSException {
-        this.medicoService.save(medico);
-        medico = new Medico();
-        facesUtil.mensagemSucesso("Médico cadastrado com sucesso!");
+    public void salvar() {
+        try {
+            this.medicoService.save(medico);
+            medico = new Medico();
+            facesUtil.mensagemSucesso("Cadastro efetuado com sucesso!");
+        } catch (RollbackException ex) {
+            facesUtil.mensagemErro("O CPF informado já está cadastrado. Informe outro CPF.");
+        } catch (UBSException ex) {
+            Logger.getLogger(MedicoBean.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void excluir() throws UBSException {
         this.medicoService.delete(medicoSelecionado);
         facesUtil.mensagemSucesso("Exclusão efetuada com sucesso!");
-    } 
+    }
 
     /*
      * Metodo que verifica se o objeto esta nulo quando for recuperado.
