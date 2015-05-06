@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
+import javax.persistence.RollbackException;
 
 /**
  *
@@ -37,10 +38,14 @@ public class OdontologoBean implements Serializable {
         return odontologos;
     }
 
-    public void salvar() throws UBSException {
-        this.odontologoService.save(odontologo);
-        odontologo = new Odontologo();
-        facesUtil.mensagemSucesso("Odontólogo cadastrado com sucesso!");
+    public void salvar(){
+        try {
+            this.odontologoService.save(odontologo);
+            odontologo = new Odontologo();
+            facesUtil.mensagemSucesso("Odontólogo cadastrado com sucesso!");
+        } catch (RollbackException ex) {
+            facesUtil.mensagemErro("O CPF informado já está cadastrado. Informe outro CPF.");
+        }
     }
 
     public void excluir() throws UBSException {

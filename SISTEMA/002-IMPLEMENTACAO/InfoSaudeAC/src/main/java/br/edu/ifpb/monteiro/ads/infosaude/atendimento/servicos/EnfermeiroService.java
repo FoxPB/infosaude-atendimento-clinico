@@ -23,7 +23,7 @@ public class EnfermeiroService implements Serializable {
     private EnfermeiroDao enfermeiroDAO;
 
     @Transactional
-    public void save(Enfermeiro enfermeiro) throws UBSException {
+    public void save(Enfermeiro enfermeiro){
         this.enfermeiroDAO.salvar(enfermeiro);
     }
 

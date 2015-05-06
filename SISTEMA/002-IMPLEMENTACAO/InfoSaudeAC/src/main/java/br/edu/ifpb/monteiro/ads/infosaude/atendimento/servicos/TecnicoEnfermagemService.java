@@ -20,7 +20,7 @@ public class TecnicoEnfermagemService implements Serializable {
     private TecnicoEnfermagemDao tecnicoEnfermagemDAO;
 
     @Transactional
-    public void save(TecnicoEnfermagem tecnicoEnfermagem)  throws UBSException{
+    public void save(TecnicoEnfermagem tecnicoEnfermagem){
         tecnicoEnfermagemDAO.salvar(tecnicoEnfermagem);
     }
 

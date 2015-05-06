@@ -23,7 +23,7 @@ public class OdontologoService implements Serializable {
     private OdontologoDao odontologoDAO;
 
     @Transactional
-    public void save(Odontologo odontologo) throws UBSException {
+    public void save(Odontologo odontologo){
         odontologoDAO.salvar(odontologo);
     }
 

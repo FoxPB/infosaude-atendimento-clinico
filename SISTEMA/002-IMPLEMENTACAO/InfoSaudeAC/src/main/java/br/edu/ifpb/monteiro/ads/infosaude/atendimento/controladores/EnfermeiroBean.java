@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
+import javax.persistence.RollbackException;
 
 /**
  *
@@ -38,9 +39,13 @@ public class EnfermeiroBean implements Serializable {
     }
 
     public void salvar() throws UBSException {
+        try {
         this.enfermeiroService.save(enfermeiro);
         enfermeiro = new Enfermeiro();
         facesUtil.mensagemSucesso("Enfermeiro cadastrado com sucesso!");
+        } catch (RollbackException ex) {
+            facesUtil.mensagemErro("O CPF informado já está cadastrado. Informe outro CPF.");
+        }
     }
 
     public void excluir() throws UBSException {

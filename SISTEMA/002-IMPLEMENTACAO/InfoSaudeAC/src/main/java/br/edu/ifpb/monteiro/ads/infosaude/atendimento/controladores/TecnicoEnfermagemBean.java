@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
+import javax.persistence.RollbackException;
 
 /**
  *
@@ -37,16 +38,20 @@ public class TecnicoEnfermagemBean implements Serializable {
         return tecnicos;
     }
 
-    public void salvar() throws UBSException {
-        this.tecnicoEnfermagemService.save(tecnicoEnfermagem);
-        tecnicoEnfermagem = new TecnicoEnfermagem();
-        facesUtil.mensagemSucesso("Técnico em Enfermagem cadastrado com sucesso!");
+    public void salvar(){
+        try {
+            this.tecnicoEnfermagemService.save(tecnicoEnfermagem);
+            tecnicoEnfermagem = new TecnicoEnfermagem();
+            facesUtil.mensagemSucesso("Técnico em Enfermagem cadastrado com sucesso!");
+        } catch (RollbackException ex) {
+            facesUtil.mensagemErro("O CPF informado já está cadastrado. Informe outro CPF.");
+        }
     }
 
     public void excluir() throws UBSException {
         this.tecnicoEnfermagemService.delete(tecnicoEnfermagemSelecionado);
         facesUtil.mensagemSucesso("Exclusão efetuada com sucesso!");
-    } 
+    }
 
     /*
      * Metodo que verifica se o objeto esta nulo quando for recuperado.
