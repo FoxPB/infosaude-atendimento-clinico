@@ -6,8 +6,6 @@ import br.edu.ifpb.monteiro.ads.infosaude.atendimento.servicos.MedicoService;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
 import java.io.Serializable;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 import javax.persistence.RollbackException;
@@ -47,8 +45,6 @@ public class MedicoBean implements Serializable {
             facesUtil.mensagemSucesso("Cadastro efetuado com sucesso!");
         } catch (RollbackException ex) {
             facesUtil.mensagemErro("O CPF informado já está cadastrado. Informe outro CPF.");
-        } catch (UBSException ex) {
-            Logger.getLogger(MedicoBean.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
