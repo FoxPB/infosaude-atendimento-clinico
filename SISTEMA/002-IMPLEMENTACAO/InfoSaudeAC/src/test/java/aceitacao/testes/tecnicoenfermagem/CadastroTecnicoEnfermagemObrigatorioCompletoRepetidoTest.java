@@ -22,7 +22,7 @@ public class CadastroTecnicoEnfermagemObrigatorioCompletoRepetidoTest {
 
     @Test
     public void testCadastroTecnicoEnfermagemObrigatorioCompletoRepetido() throws Exception {
-        driver.get(baseUrl + "/InfoSaudeAC/enfermeiro/CadastroTecnicoEnfermagem.xhtml");
+        driver.get(baseUrl + "/InfoSaudeAC/tecnico-enfermagem/CadastroTecnicoEnfermagem.xhtml");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).clear();
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).sendKeys("1240001");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:cpf")).clear();
@@ -50,7 +50,7 @@ public class CadastroTecnicoEnfermagemObrigatorioCompletoRepetidoTest {
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        driver.get(baseUrl + "/InfoSaudeAC/enfermeiro/CadastroTecnicoEnfermagem.xhtml");
+        driver.get(baseUrl + "/InfoSaudeAC/tecnico-enfermagem/CadastroTecnicoEnfermagem.xhtml");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).clear();
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).sendKeys("1240001");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:cpf")).clear();

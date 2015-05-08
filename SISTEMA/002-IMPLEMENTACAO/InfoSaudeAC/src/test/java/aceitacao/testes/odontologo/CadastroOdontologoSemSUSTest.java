@@ -23,8 +23,8 @@ public class CadastroOdontologoSemSUSTest {
     @Test
     public void testCadastroOdontologoSemSUS() throws Exception {
         driver.get(baseUrl + "/InfoSaudeAC/odontologo/CadastroOdontologo.xhtml");
-        driver.findElement(By.id("formCadastroOdontologo:coren")).clear();
-        driver.findElement(By.id("formCadastroOdontologo:coren")).sendKeys("78451");
+        driver.findElement(By.id("formCadastroOdontologo:cro")).clear();
+        driver.findElement(By.id("formCadastroOdontologo:cro")).sendKeys("78451");
         driver.findElement(By.id("formCadastroOdontologo:cpf")).clear();
         driver.findElement(By.id("formCadastroOdontologo:cpf")).sendKeys("515.124.304-71");
         driver.findElement(By.id("formCadastroOdontologo:nome")).clear();

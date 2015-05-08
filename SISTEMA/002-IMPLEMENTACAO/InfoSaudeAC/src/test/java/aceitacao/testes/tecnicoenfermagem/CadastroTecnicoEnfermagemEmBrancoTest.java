@@ -22,7 +22,7 @@ public class CadastroTecnicoEnfermagemEmBrancoTest {
 
     @Test
     public void testCadastroTecnicoEnfermagemEmBranco() throws Exception {
-        driver.get(baseUrl + "/InfoSaudeAC/enfermeiro/CadastroTecnicoEnfermagem.xhtml");
+        driver.get(baseUrl + "/InfoSaudeAC/tecnico-enfermagem/CadastroTecnicoEnfermagem.xhtml");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:saveButton")).click();
         for (int second = 0;; second++) {
             if (second >= 60) {

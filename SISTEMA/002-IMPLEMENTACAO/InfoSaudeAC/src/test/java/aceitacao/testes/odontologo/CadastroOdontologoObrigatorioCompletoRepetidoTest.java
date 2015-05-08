@@ -23,8 +23,8 @@ public class CadastroOdontologoObrigatorioCompletoRepetidoTest {
     @Test
     public void testCadastroOdontologoObrigatorioCompletoRepetido() throws Exception {
         driver.get(baseUrl + "/InfoSaudeAC/odontologo/CadastroOdontologo.xhtml");
-        driver.findElement(By.id("formCadastroOdontologo:coren")).clear();
-        driver.findElement(By.id("formCadastroOdontologo:coren")).sendKeys("1240001");
+        driver.findElement(By.id("formCadastroOdontologo:cro")).clear();
+        driver.findElement(By.id("formCadastroOdontologo:cro")).sendKeys("1240001");
         driver.findElement(By.id("formCadastroOdontologo:cpf")).clear();
         driver.findElement(By.id("formCadastroOdontologo:cpf")).sendKeys("131.784.202-23");
         driver.findElement(By.id("formCadastroOdontologo:cartaoSus")).clear();
@@ -51,8 +51,8 @@ public class CadastroOdontologoObrigatorioCompletoRepetidoTest {
             verificationErrors.append(e.toString());
         }
         driver.get(baseUrl + "/InfoSaudeAC/odontologo/CadastroOdontologo.xhtml");
-        driver.findElement(By.id("formCadastroOdontologo:coren")).clear();
-        driver.findElement(By.id("formCadastroOdontologo:coren")).sendKeys("1240001");
+        driver.findElement(By.id("formCadastroOdontologo:cro")).clear();
+        driver.findElement(By.id("formCadastroOdontologo:cro")).sendKeys("1240001");
         driver.findElement(By.id("formCadastroOdontologo:cpf")).clear();
         driver.findElement(By.id("formCadastroOdontologo:cpf")).sendKeys("131.784.202-23");
         driver.findElement(By.id("formCadastroOdontologo:cartaoSus")).clear();

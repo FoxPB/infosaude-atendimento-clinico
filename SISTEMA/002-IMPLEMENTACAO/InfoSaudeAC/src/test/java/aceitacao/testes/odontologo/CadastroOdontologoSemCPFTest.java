@@ -23,8 +23,8 @@ public class CadastroOdontologoSemCPFTest {
     @Test
     public void testCadastroOdontologoSemCPF() throws Exception {
         driver.get(baseUrl + "/InfoSaudeAC/odontologo/CadastroOdontologo.xhtml");
-        driver.findElement(By.id("formCadastroOdontologo:coren")).clear();
-        driver.findElement(By.id("formCadastroOdontologo:coren")).sendKeys("78451");
+        driver.findElement(By.id("formCadastroOdontologo:cro")).clear();
+        driver.findElement(By.id("formCadastroOdontologo:cro")).sendKeys("78451");
         driver.findElement(By.id("formCadastroOdontologo:cartaoSus")).clear();
         driver.findElement(By.id("formCadastroOdontologo:cartaoSus")).sendKeys("788 4551 2200");
         driver.findElement(By.id("formCadastroOdontologo:nome")).clear();

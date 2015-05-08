@@ -23,8 +23,8 @@ public class CadastroOdontologoCompletoTest {
     @Test
     public void testCadastroOdontologoCompleto() throws Exception {
         driver.get(baseUrl + "/InfoSaudeAC/medico/CadastroOdontologo.xhtml");
-        driver.findElement(By.id("formCadastroOdontologo:coren")).clear();
-        driver.findElement(By.id("formCadastroOdontologo:coren")).sendKeys("4567891");
+        driver.findElement(By.id("formCadastroOdontologo:cro")).clear();
+        driver.findElement(By.id("formCadastroOdontologo:cro")).sendKeys("4567891");
         driver.findElement(By.id("formCadastroOdontologo:cpf")).clear();
         driver.findElement(By.id("formCadastroOdontologo:cpf")).sendKeys("712.561.841-36");
         driver.findElement(By.id("formCadastroOdontologo:cartaoSus")).clear();

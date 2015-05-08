@@ -22,7 +22,7 @@ public class CadastroTecnicoEnfermagemSemCPFTest {
 
     @Test
     public void testCadastroTecnicoEnfermagemSemCPF() throws Exception {
-        driver.get(baseUrl + "/InfoSaudeAC/enfermeiro/CadastroTecnicoEnfermagem.xhtml");
+        driver.get(baseUrl + "/InfoSaudeAC/tecnico-enfermagem/CadastroTecnicoEnfermagem.xhtml");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).clear();
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:coren")).sendKeys("78451");
         driver.findElement(By.id("formCadastroTecnicoEnfermagem:cartaoSus")).clear();
