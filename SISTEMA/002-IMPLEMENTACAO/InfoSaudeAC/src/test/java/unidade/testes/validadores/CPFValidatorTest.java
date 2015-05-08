@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package br.edu.ifpb.monteiro.ads.infosaude.atendimento.validadores;
+package unidade.testes.validadores;
 
+import br.edu.ifpb.monteiro.ads.infosaude.atendimento.validadores.CPFValidator;
 import javax.faces.validator.ValidatorException;
 import org.junit.Test;
 
@@ -19,21 +15,21 @@ public class CPFValidatorTest {
      */
     //Este teste passa um cpf inválido e espera uma exceção
     @Test(expected = ValidatorException.class)
-    public void testValidate() {
+    public void testeCPFInvalidoRetornaExcecao() {
         CPFValidator cpfValidator = new CPFValidator();
         cpfValidator.validate(null, null, "00011122233");
     }
 
     //Este teste passa um cpf inválido e espera uma exceção
     @Test(expected = ValidatorException.class)
-    public void testOneValidate() {
+    public void testeCPFInvalidoNumerosIguaisRetornaExcecao() {
         CPFValidator cpfValidator = new CPFValidator();
         cpfValidator.validate(null, null, "00000000000");
     }
 
     //Este teste passa um cpf em braco e espera uma exceção
     @Test(expected = ValidatorException.class)
-    public void testTwoValidate() {
+    public void testeCPFVazioRetornaExcecao() {
         CPFValidator cpfValidator = new CPFValidator();
         cpfValidator.validate(null, null, "");
     }

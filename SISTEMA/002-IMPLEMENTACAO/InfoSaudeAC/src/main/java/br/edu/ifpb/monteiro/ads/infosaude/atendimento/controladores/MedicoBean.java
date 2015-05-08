@@ -30,6 +30,8 @@ public class MedicoBean implements Serializable {
 
     @Inject
     private Medico medicoSelecionado;
+    
+    private List<Medico> medicosFiltrados;
 
     private List<Medico> medicos;
 
@@ -83,6 +85,14 @@ public class MedicoBean implements Serializable {
 
     public void setMedicoService(MedicoService medicoService) {
         this.medicoService = medicoService;
+    }
+
+    public List<Medico> getMedicosFiltrados() {
+        return medicosFiltrados;
+    }
+
+    public void setMedicosFiltrados(List<Medico> medicosFiltrados) {
+        this.medicosFiltrados = medicosFiltrados;
     }
 
 }

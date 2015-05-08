@@ -21,17 +21,6 @@
 
                 <p:growl/>
 
-                <!-- Show a gif image to loading ajax user requests -->
-                <p:ajaxStatus>
-                    <f:facet name="start">
-                        <h:graphicImage library="imagens" name="loading.gif"/>
-                        <h:outputLabel value="Aguarde..." style="color: tomato"/>
-                    </f:facet>
-                    <f:facet name="complete">
-                        <h:outputText value=""/>
-                    </f:facet>
-                </p:ajaxStatus>
-
                 <h:panelGrid columns="2">
 
                     <p:outputLabel for="coren" value="#{msg.crm}:"/>
