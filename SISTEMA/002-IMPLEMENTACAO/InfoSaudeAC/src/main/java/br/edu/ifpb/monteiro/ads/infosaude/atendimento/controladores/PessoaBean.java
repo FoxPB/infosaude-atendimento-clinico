@@ -1,6 +1,7 @@
 package br.edu.ifpb.monteiro.ads.infosaude.atendimento.controladores;
 
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes.Estados;
+import br.edu.ifpb.monteiro.ads.infosaude.atendimento.enumeracoes.RacaCor;
 import br.edu.ifpb.monteiro.ads.infosaude.atendimento.util.jsf.FacesUtil;
 import java.io.Serializable;
 import java.util.Arrays;
@@ -21,13 +22,19 @@ public class PessoaBean implements Serializable {
     FacesUtil facesUtil;
 
     private final List<Estados> estados;
+    private final List<RacaCor> racas;
 
     public PessoaBean() {
         estados = Arrays.asList(Estados.values());
+        racas = Arrays.asList(RacaCor.values());
     }
 
     public List<Estados> getEstados() {
         return estados;
+    }
+    
+    public List<RacaCor> getRacas() {
+        return racas;
     }
     
     public void verificaSeEmailValido(String email){

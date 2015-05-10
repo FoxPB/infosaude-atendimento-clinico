@@ -54,8 +54,10 @@
                             </p:calendar>
 
                             <p:outputLabel for="racaCor" value="#{msg.race}/#{msg.color}:"/>
-                            <p:inputText id="racaCor" value="#{tecnicoEnfermagemBean.tecnicoEnfermagem.corOuRaca}"
-                                         styleClass="upper" size="15"/>
+                            <p:selectOneMenu id="racaCor" value="#{tecnicoEnfermagemBean.tecnicoEnfermagem.corOuRaca}">
+                                <f:selectItem itemLabel="#{msg.selectIt}..." noSelectionOption="true"/>
+                                <f:selectItems value="#{pessoaBean.racas}" itemValue="#{racaCor}" itemLabel="#{raca.descricao}" var="raca"/>
+                            </p:selectOneMenu>
                         </h:panelGrid>
                     </p:tab>
 
