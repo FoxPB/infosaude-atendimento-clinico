@@ -50,7 +50,7 @@
                             <p:outputLabel for="dataNascimento" value="#{msg.birthDate}:" />
                             <p:calendar id="dataNascimento" value="#{enfermeiroBean.enfermeiro.dataNascimento}" 
                                         navigator="true" pattern="dd/MM/yyyy" maxdate="#{dateTimeUtilBean.dateToday}" 
-                                        yearRange="c-150:c+0" size="15" locale="pt">
+                                        yearRange="c-150:c+0" size="13" locale="pt">
                                 <f:convertDateTime type="date" locale="pt_BR"/>
                             </p:calendar>
 
@@ -81,15 +81,15 @@
                             <p:inputText id="rua" value="#{enfermeiroBean.enfermeiro.enderecoRua}" styleClass="upper" size="40"/>
 
                             <p:outputLabel for="numero" value="#{msg.number}:" style="margin-left: 20px"/>
-                            <p:inputText id="numero" value="#{enfermeiroBean.enfermeiro.enderecoNumero}" styleClass="upper" size="10"/>
+                            <p:inputText id="numero" value="#{enfermeiroBean.enfermeiro.enderecoNumero}" styleClass="upper" size="22"/>
 
-                            <p:outputLabel for="bairro" value="#{msg.neighborhood}:" style="margin-left: 20px"/>
+                            <p:outputLabel for="bairro" value="#{msg.neighborhood}:"/>
                             <p:inputText id="bairro" value="#{enfermeiroBean.enfermeiro.enderecoBairro}" styleClass="upper" size="40"/>
 
                             <p:outputLabel for="cep" value="#{msg.postalCode}:" style="margin-left: 20px"/>
-                            <p:inputMask mask="99999-999" id="cep" value="#{enfermeiroBean.enfermeiro.enderecoCep}" styleClass="upper" size="10"/>
+                            <p:inputMask mask="99999-999" id="cep" value="#{enfermeiroBean.enfermeiro.enderecoCep}" styleClass="upper" size="22"/>
 
-                            <p:outputLabel for="cidade" value="#{msg.city}:" style="margin-left: 20px"/>
+                            <p:outputLabel for="cidade" value="#{msg.city}:"/>
                             <p:inputText id="cidade" value="#{enfermeiroBean.enfermeiro.enderecoCidade}" styleClass="upper" size="40"/>
 
                             <p:outputLabel for="estado" value="#{msg.state}:" style="margin-left: 20px"/>
