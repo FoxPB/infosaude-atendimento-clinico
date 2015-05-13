@@ -5,6 +5,9 @@
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      
+      <!--Cria as tabelas de pais, cidades e estados, caso não existam e as populam com os dados relacionados para o Brasil.-->
+      <property name="javax.persistence.sql-load-script-source" value="META-INF/sql/CidadesEstadosBrasil.sql"/>
     </properties>
   </persistence-unit>
 </persistence>
